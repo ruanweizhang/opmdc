@@ -1,0 +1,29 @@
+module opmdc {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:opmdc";
+    prefix "opmdc";
+
+    revision "2017-07-05" {
+        description "Initial revision of opmdc model";
+    }
+    	rpc set-parameter{
+    		input{
+    			leaf parameters{
+    				type string;
+    			}
+			}
+    		output{
+        		leaf result{
+       	        	type string;
+       	 		}
+    		}
+    	}
+    	
+    	rpc get-response{
+    		output{
+        		leaf response{
+       	        	type string;
+       	 		}
+    		}
+    	}
+}
